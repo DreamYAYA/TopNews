@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+
+<view class="nav-scroll">
+    <scroll-view class="scroll-view_H" scroll-x="true"style="width: 100%">
+      <text wx:for="{{section}}" wx:key="id" id="{{item.id}}"  data-channel="{{item.name}}"catchtap="handleTap" class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+        </scroll-view>
+</view>
+
+<view class="banner-scroll">
+
+ <swiper indicator-dots="true" autoplay="true" class="Bannerswiper">
+            <block wx:for="{{banners}}" wx:key="picUrl">
+                <swiper-item>
+                    <view class="swiper-item">
+                        <navigator url="Play/play?name={{item.name}}">
+                            <view class="pic">
+                                <image src="{{item.picUrl}}" style="width:100%" mode="aspectFit" class="slide-image" />
+                            </view>
+                            <view class="title">
+                                <text>{{item.name}}</text>
+                            </view>
+                        </navigator>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+
+
+</view>
+
+
+<view class="news_items ">
+
+<view class="news_item clearfix" wx:for="{{userInfos}}" >
+
+<view class="item_image">
+<image src="{{item.pic}}"/>
+</view>
+
+<view class="news_title">
+
+<text id="huo">{{item.title}}</text>
+
+<view class="news_content"> 
+
+<view class="news_desc"><text>{{item.time}}</text></view>
+<view class="news_time"><text>{{item.src}}</text></view>
+</view>
+
+</view>
+
+
+
+</view>
+
+</view>
+</view>
