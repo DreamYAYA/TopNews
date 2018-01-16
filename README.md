@@ -7,5 +7,5 @@
 2.首页的上拉加载
 [演示项目截图]
 
-![image](https://github.com/DreamYAYA/TopNews/image/1.jpg)
+![image](https://raw.githubusercontent.com/DreamYAYA/TopNews/master/image/1.jpg)
 
